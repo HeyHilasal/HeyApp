@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practicas</title>
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+	<audio src="song_1.mp3" autoplay="autoplay" loop="loop" volume="50" controls=""></audio>
+	<script>
+	window.onload=function(){
+ 
+		// creamos el objeto audio
+		var audioElement = document.createElement('audio');
+ 
+		// indicamos el archivo de audio a cargar
+		audioElement.setAttribute('src', 'sonido.ogg');
+ 
+		// Si deseamos que una vez cargado empieze a sonar...
+		//audioElement.setAttribute('autoplay', 'autoplay');
+ 
+		document.getElementById("play").addEventListener("click", function() {
+			// Si deseamos que inicie siempre desde el principio
+			//audioElement.currentTime = 0;
+ 
+			// iniciamos el audio
+			audioElement.play();
+		});
+ 
+		document.getElementById("pause").addEventListener("click", function() {
+			// hacemos pausa
+			audioElement.pause();
+		});
+	};
+	</script>
+	<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" >Action</a></li>
+    <li><a class="dropdown-item" type="button" value="Pause" id="pause">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
