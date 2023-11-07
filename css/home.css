@@ -1,0 +1,67 @@
+body{
+  cursor: url(images/cursor.png), auto;
+}
+a{
+    cursor: url(images/cursor.png);
+  }
+
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1;
+  border-color: black;
+}
+
+#title{
+  color: #6727b0;
+  font-weight: 800;
+  border-bottom: 3px solid rgb(176, 80, 255);
+  background: rgb(255, 255, 255);
+  padding: 8px 30px;
+}
+
+/****************/
+input {
+  display: none;
+}
+
+
+.fc-content{
+  color: #fff !important;
+}
+
+
+
+#btnCerrar{
+  color:rgb(157, 20, 220);
+  padding: 5px;
+  background: #8888;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 600;
+}
+#btnCerrar:hover{
+  cursor: pointer;
+  background-color: #333;
+}
+
+
+
+.circu{
+  padding: 25px;
+  background: #ccc;
+  border-radius: 50px;
+}
+
+#grupoRadio label:hover{
+  cursor: pointer;
+}
+
+#grupoRadio input[type="radio"]:checked + label {
+  border: 3px solid #ccc !important;  
+}
+
+
+.activado input[type=radio]:checked + label {
+  border: 3px solid #555 !important;  
+}

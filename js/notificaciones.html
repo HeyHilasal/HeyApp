@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Notificaciones</title>
+</head>
+<body>
+	<h3>Archivos externos</h3>
+	<button type="button" onclick="notificar()">Enviar Notificaciones</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+    if(!Notification){
+        alert("Las notificaciones no se soportan en tu navegador, bajate uno mas nuevo.");
+        return;
+    }
+    if(Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+function notificar(){
+    if (Notification.permission !== "granted"){
+        Notification.requestPermission();
+    }else {
+        var notification = new Notification("Titulo de mi Notificacion",
+        {
+            icon: "http://mejorcodigo.net/res/img/logo.png",
+            body: "Este es el contenido de la notificacion!!!"
+        });
+        notification.onclick = function(){
+            window.open("http://mejorcodigo.net");
+        }
+    }
+}
+    </script>
+
+</body>
+</html>
